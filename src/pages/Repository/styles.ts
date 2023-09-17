@@ -17,6 +17,7 @@ export const Header = styled.header`
             margin-right: 4px;
         }
     }
+
 `;
 
 export const RepoInfo = styled.section`
@@ -45,6 +46,7 @@ export const RepoInfo = styled.section`
         display: flex;
         list-style: none;
         margin-top: 40px;
+        
     }
     li {
         & + li {
@@ -94,3 +96,4 @@ export const Issue = styled.div`
         }
     }
 `
+

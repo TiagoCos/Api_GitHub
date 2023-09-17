@@ -47,11 +47,11 @@ export const Repository:React.FC = () => {
         // executado quando o repositório for alterado
         // consulta api do github para obter dados do repositório de interesse
         api
-            .get<GithubRepository>(`repos/${params.repository}`)
+            .get<GithubRepository>(`repos/${params.repository}`, config)
             .then(response => setRepository(response.data))
         // consulta api do github para obter dados das issues do repositório de interesse
         api
-            .get<GithubIssue[]>(`repos/${params.repository}/issues`)
+            .get<GithubIssue[]>(`repos/${params.repository}/issues`, config)
             .then(response => setIssues(response.data))
         
     }, [params.repository])
@@ -101,5 +101,4 @@ export const Repository:React.FC = () => {
                 ))}
             </Issue>
         </>
-    )
-}
+    )}
